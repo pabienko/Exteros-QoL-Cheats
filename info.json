@@ -1,0 +1,14 @@
+{
+  "name": "Exteros-QoL-Cheats",
+  "version": "0.3.0",
+  "title": "Exteros Quality of Life System - Cheats",
+  "author": "Exteros",
+  "contact": "https://github.com/pabienko",
+  "homepage": "https://github.com/pabienko/Exteros-QoL-Cheats",
+  "factorio_version": "2.0",
+  "dependencies": [
+    "base >= 2.0",
+    "Exteros-QoL-System >= 0.3.3"
+  ],
+  "description": "Optional cheat addon for Exteros' QoL System: reach, crafting and mining speed, inventory slots, stack sizes and productivity. Everything is off until you enable Cheat Mode."
+}

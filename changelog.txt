@@ -1,0 +1,14 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.4.0
+Date: 29. 09. 2026
+  Major Features:
+    - Cheat Mode moved here from Exteros' QoL System. Your settings carry over unchanged.
+  Bugfixes:
+    - Turning Cheat Mode off now removes the reach, speed and inventory bonuses from your character instead of leaving them in the save.
+---------------------------------------------------------------------------------------------------
+Version: 0.3.0
+Date: 29. 09. 2026
+  Major Features:
+    - Cheat Mode moved here from Exteros' QoL System. Your settings carry over unchanged.
+  Bugfixes:
+    - Turning Cheat Mode off now removes the reach, speed and inventory bonuses from your character instead of leaving them in the save.

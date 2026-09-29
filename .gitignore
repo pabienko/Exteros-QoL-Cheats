@@ -1,0 +1,9 @@
+# Editor settings (machine-specific paths)
+.emmyrc.json
+.luarc.json
+.vscode/
+
+# Test runner config and data
+factorio-test.json
+factorio-test-data-dir/
+factorio-test-results.json
