@@ -1,6 +1,6 @@
 {
   "name": "Exteros-QoL-Cheats",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "title": "Exteros Quality of Life System - Cheats",
   "author": "Exteros",
   "contact": "https://github.com/pabienko",
@@ -8,7 +8,7 @@
   "factorio_version": "2.0",
   "dependencies": [
     "base >= 2.0",
-    "Exteros-QoL-System >= 0.3.3"
+    "Exteros-QoL-System >= 0.3.4"
   ],
-  "description": "Optional cheat addon for Exteros' QoL System: reach, crafting and mining speed, inventory slots, stack sizes and productivity. Everything is off until you enable Cheat Mode."
+  "description": "Cheat addon for Exteros' QoL System: reach distance, crafting and mining speed, inventory slots, stack size, productivity on every recipe, fuel stats (fuel value, acceleration, top speed) and recycler return rate for quality upcycling. Replaces Adjustable Fuel Stats and Adjustable Recycler. Nothing changes until you enable Cheat Mode."
 }

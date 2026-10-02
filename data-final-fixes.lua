@@ -1,3 +1,6 @@
+local recycler_return = require("features.recycler-return")
+local fuel_stats = require("features.fuel-stats")
+
 local function apply()
   local unlock = settings.startup["exteros-qol-cheat-productivity-unlocked"].value
   local cap = settings.startup["exteros-qol-cheat-productivity-cap"].value / 100
@@ -38,4 +41,6 @@ end
 
 if settings.startup["exteros-qol-cheat-mode-enabled"].value then
   apply()
+  recycler_return.apply()
+  fuel_stats.apply()
 end

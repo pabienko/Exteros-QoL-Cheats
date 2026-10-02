@@ -1,4 +1,32 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.1
+Date: 02. 10. 2026
+  Features:
+    - Added Fuel Stats: change the energy value, vehicle acceleration and top speed of every vanilla and Space Age fuel. Replaces the standalone mod Adjustable Fuel Stats.
+    - Added Recycler Return Rate: set how much the recycler gives back, from 1 to 100 % (vanilla 25 %), for items that recycle into themselves only (default) or every recycling recipe except scrap, to tune quality upcycling loops. Replaces the standalone mod Adjustable Recycler.
+  Changes:
+    - Cheat settings have their own entry in the Settings Hub list.
+  Bugfixes:
+    - Fuel Stats, fixed compared to Adjustable Fuel Stats: the default values match the game, so untouched settings no longer change any fuel, and Yumako, Jellynut, Yumako mash, Jelly, Bioflux and Nutrients can be changed too.
+    - Recycler Return Rate, fixed compared to Adjustable Recycler: the rate is applied once, so 25 % really means vanilla, and it works on Factorio 2.1.
+  Info:
+    - Requires Exteros' QoL System 0.3.4 (Factorio 2.0) or 0.4.4 (Factorio 2.1).
+    - The mod download is smaller: the thumbnail was compressed.
+---------------------------------------------------------------------------------------------------
+Version: 0.3.1
+Date: 02. 10. 2026
+  Features:
+    - Added Fuel Stats: change the energy value, vehicle acceleration and top speed of every vanilla and Space Age fuel. Replaces the standalone mod Adjustable Fuel Stats.
+    - Added Recycler Return Rate: set how much the recycler gives back, from 1 to 100 % (vanilla 25 %), for items that recycle into themselves only (default) or every recycling recipe except scrap, to tune quality upcycling loops. Replaces the standalone mod Adjustable Recycler.
+  Changes:
+    - Cheat settings have their own entry in the Settings Hub list.
+  Bugfixes:
+    - Fuel Stats, fixed compared to Adjustable Fuel Stats: the default values match the game, so untouched settings no longer change any fuel, and Yumako, Jellynut, Yumako mash, Jelly, Bioflux and Nutrients can be changed too.
+    - Recycler Return Rate, fixed compared to Adjustable Recycler: the rate is applied once, so 25 % really means vanilla, and it works on Factorio 2.1.
+  Info:
+    - Requires Exteros' QoL System 0.3.4 (Factorio 2.0) or 0.4.4 (Factorio 2.1).
+    - The mod download is smaller: the thumbnail was compressed.
+---------------------------------------------------------------------------------------------------
 Version: 0.4.0
 Date: 29. 09. 2026
   Major Features:

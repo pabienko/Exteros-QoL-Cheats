@@ -163,7 +163,7 @@ script.on_event(defines.events.on_player_respawned, function(event)
 end)
 
 remote.add_interface("exteros-qol-addon-cheats", {
-  hub_settings = function() return { per_user = HUB_PER_USER } end,
+  hub_settings = function() return { per_user = HUB_PER_USER, title = {"mod-name.Exteros-QoL-Cheats"} } end,
   set_hub_setting = function(player_index, name, value, scope)
     if scope ~= "per_user" or not HUB_SETTING_NAMES[name] then return end
 

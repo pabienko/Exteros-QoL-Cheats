@@ -20,6 +20,12 @@ Nothing does anything until you turn on **Cheat Mode** in the startup settings. 
 
 ⚠️ **Productivity Overhaul** - Unlocks productivity modules for every recipe, including those that normally refuse them, and sets your own productivity cap.
 
+⚠️ **Fuel Stats** - Changes the energy value, vehicle acceleration and top speed of every vanilla and Space Age fuel.
+
+⚠️ **Recycler Return Rate** - Sets how much the recycler gives back, from 1 to 100% (vanilla 25%), and lets you choose whether that applies only to items that recycle into themselves (the default) or to every recycling recipe except scrap. Handy for tuning quality upcycling loops.
+
+Fuel Stats and Recycler Return Rate replace the standalone mods Adjustable Fuel Stats and Adjustable Recycler. If you still have them installed, these two settings stay hidden; remove the old mod to use them here.
+
 Turning Cheat Mode off removes the reach, speed, and inventory bonuses from your character again.
 
 ---
