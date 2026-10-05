@@ -1,4 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.2
+Date: 05. 10. 2026
+  Bugfixes:
+    - Fixed the addon thumbnail having a green background on the mod portal and in the in-game mod browser since 0.4.1. In 0.4.1 the thumbnail was compressed into a palette PNG, which keeps transparency in a separate table instead of in an alpha channel. The mod portal drops that table when it processes the thumbnail, so the colour hidden under the transparent pixels, green, became the background. The thumbnail is now an ordinary PNG with a full alpha channel, made again from the original artwork. The portal keeps this kind of image transparent; this was checked by uploading it to the portal before the release.
+    - The thumbnail is 288x288, the size the portal displays, instead of 144x144, so the portal no longer upscales it and it is sharp again.
+---------------------------------------------------------------------------------------------------
+Version: 0.3.2
+Date: 05. 10. 2026
+  Bugfixes:
+    - Fixed the addon thumbnail having a green background on the mod portal and in the in-game mod browser since 0.3.1. In 0.3.1 the thumbnail was compressed into a palette PNG, which keeps transparency in a separate table instead of in an alpha channel. The mod portal drops that table when it processes the thumbnail, so the colour hidden under the transparent pixels, green, became the background. The thumbnail is now an ordinary PNG with a full alpha channel, made again from the original artwork. The portal keeps this kind of image transparent; this was checked by uploading it to the portal before the release.
+    - The thumbnail is 288x288, the size the portal displays, instead of 144x144, so the portal no longer upscales it and it is sharp again.
+---------------------------------------------------------------------------------------------------
 Version: 0.4.1
 Date: 02. 10. 2026
   Features:
