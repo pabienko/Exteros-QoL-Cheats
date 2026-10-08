@@ -1,5 +1,4 @@
-local recycler_return = require("features.recycler-return")
-local fuel_stats = require("features.fuel-stats")
+local roboport_range = require("features.roboport-range")
 
 local function apply()
   local unlock = settings.startup["exteros-qol-cheat-productivity-unlocked"].value
@@ -41,6 +40,5 @@ end
 
 if settings.startup["exteros-qol-cheat-mode-enabled"].value then
   apply()
-  recycler_return.apply()
-  fuel_stats.apply()
+  roboport_range.apply()
 end

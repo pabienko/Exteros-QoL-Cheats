@@ -45,6 +45,13 @@ for _, def in ipairs(HUB_PER_USER) do
   HUB_SETTING_NAMES[def.name] = true
 end
 
+local HUB_GROUPS = {
+  { key = "reach", title = {"exteros-qol-cheats-hub.reach"}, per_user = { HUB_PER_USER[1] } },
+  { key = "crafting-speed", title = {"exteros-qol-cheats-hub.crafting-speed"}, per_user = { HUB_PER_USER[2] } },
+  { key = "mining-speed", title = {"exteros-qol-cheats-hub.mining-speed"}, per_user = { HUB_PER_USER[3] } },
+  { key = "inventory-slots", title = {"exteros-qol-cheats-hub.inventory-slots"}, per_user = { HUB_PER_USER[4] } }
+}
+
 local function debug_log(msg)
   if settings.startup["exteros-qol-debug"] and settings.startup["exteros-qol-debug"].value then
     log("[Cheats] " .. msg)
@@ -163,7 +170,14 @@ script.on_event(defines.events.on_player_respawned, function(event)
 end)
 
 remote.add_interface("exteros-qol-addon-cheats", {
-  hub_settings = function() return { per_user = HUB_PER_USER, title = {"mod-name.Exteros-QoL-Cheats"} } end,
+  hub_settings = function()
+    return {
+      per_user = HUB_PER_USER,
+      title = {"mod-name.Exteros-QoL-Cheats"},
+      color = "#E0807A",
+      groups = HUB_GROUPS
+    }
+  end,
   set_hub_setting = function(player_index, name, value, scope)
     if scope ~= "per_user" or not HUB_SETTING_NAMES[name] then return end
 

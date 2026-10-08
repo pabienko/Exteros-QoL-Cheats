@@ -20,11 +20,7 @@ Nothing does anything until you turn on **Cheat Mode** in the startup settings. 
 
 ⚠️ **Productivity Overhaul** - Unlocks productivity modules for every recipe, including those that normally refuse them, and sets your own productivity cap.
 
-⚠️ **Fuel Stats** - Changes the energy value, vehicle acceleration and top speed of every vanilla and Space Age fuel.
-
-⚠️ **Recycler Return Rate** - Sets how much the recycler gives back, from 1 to 100% (vanilla 25%), and lets you choose whether that applies only to items that recycle into themselves (the default) or to every recycling recipe except scrap. Handy for tuning quality upcycling loops.
-
-Fuel Stats and Recycler Return Rate replace the standalone mods Adjustable Fuel Stats and Adjustable Recycler. If you still have them installed, these two settings stay hidden; remove the old mod to use them here.
+⚠️ **Roboport Range** - Multiplies or sets an absolute value for the logistic radius, construction radius, personal roboport construction radius, and (where a roboport has one set explicitly) radar range of every roboport. Does not scale with quality.
 
 Turning Cheat Mode off removes the reach, speed, and inventory bonuses from your character again.
 
@@ -34,6 +30,10 @@ Turning Cheat Mode off removes the reach, speed, and inventory bonuses from your
 
 Cheat Mode was part of Exteros' QoL System until version 0.3.2 / 0.4.2. Install this addon and all your cheat settings carry over unchanged. If you update the QoL System without it, the bonuses Cheat Mode left on your character are removed when you load the save.
 
+## Fuel Stats and Recycler Return Rate moved out
+
+As of 0.3.3, Fuel Stats and Recycler Return Rate live in [Exteros' QoL Tweaks](https://mods.factorio.com/mod/Exteros-QoL-Tweaks) instead, each behind its own switch rather than Cheat Mode. If you already had either configured here, install Tweaks and your settings carry over unchanged; just turn the matching switch on there.
+
 ## Installation
 
 Install through the in-game mod manager, or download it from the [Factorio Mod Portal](https://mods.factorio.com/mod/Exteros-QoL-Cheats). Exteros' QoL System is installed with it as a dependency.
@@ -42,6 +42,7 @@ Install through the in-game mod manager, or download it from the [Factorio Mod P
 
 - **Factorio 2.0** and **2.1** - released as two rows built from the same source, like the QoL System.
 - **Space Age**, **Quality**, and **Elevated Rails** - supported.
+- **Missing a mod?** I can only switch off features for mods I know about, and there are far too many on the mod portal to find them all. If you use a mod that does the same thing as one of my features and both run at once, please [open an issue](https://github.com/pabienko/Exteros-QoL-Cheats/issues) with its name and I will add it.
 
 ---
 
