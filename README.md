@@ -10,15 +10,17 @@ An optional addon for [Exteros' QoL System](https://mods.factorio.com/mod/Extero
 
 Nothing does anything until you turn on **Cheat Mode** in the startup settings. The per-player values can then be changed in the mod settings or in the QoL System's Settings Hub (SHIFT + E).
 
-⚠️ **Advanced Reach** - Raises interaction, building, and loot pickup distance well beyond the normal reach.
+⚠️ **Reach** - Raises interaction, building, and loot pickup distance well beyond the normal reach.
 
-⚠️ **Crafting & Mining Speed** - Changes your character's manual crafting and mining speed.
+⚠️ **Crafting Speed** - Changes your character's manual crafting speed.
 
-⚠️ **Inventory Expansion** - Adds bonus slots to your character's inventory.
+⚠️ **Mining Speed** - Changes your character's manual mining speed.
 
-⚠️ **Stack Size Manager** - Changes item stack sizes, either as a multiplier or as an absolute value.
+⚠️ **Inventory Slots** - Adds bonus slots to your character's inventory.
 
-⚠️ **Productivity Overhaul** - Unlocks productivity modules for every recipe, including those that normally refuse them, and sets your own productivity cap.
+⚠️ **Stack Size** - Changes item stack sizes, either as a multiplier or as an absolute value.
+
+⚠️ **Productivity** - Unlocks productivity modules for every recipe, including those that normally refuse them, and sets your own productivity cap.
 
 ⚠️ **Roboport Range** - Multiplies or sets an absolute value for the logistic radius, construction radius, personal roboport construction radius, and (where a roboport has one set explicitly) radar range of every roboport. Does not scale with quality.
 
@@ -32,7 +34,7 @@ Cheat Mode was part of Exteros' QoL System until version 0.3.2 / 0.4.2. Install 
 
 ## Fuel Stats and Recycler Return Rate moved out
 
-As of 0.3.3, Fuel Stats and Recycler Return Rate live in [Exteros' QoL Tweaks](https://mods.factorio.com/mod/Exteros-QoL-Tweaks) instead, each behind its own switch rather than Cheat Mode. If you already had either configured here, install Tweaks and your settings carry over unchanged; just turn the matching switch on there.
+As of 0.3.3 / 0.4.3, Fuel Stats and Recycler Return Rate live in [Exteros' QoL Tweaks](https://mods.factorio.com/mod/Exteros-QoL-Tweaks) instead, each behind its own switch rather than Cheat Mode. If you already had either configured here, install Tweaks and your settings carry over unchanged; just turn the matching switch on there.
 
 ## Installation
 
@@ -56,4 +58,4 @@ Contact: [GitHub Profile](https://github.com/pabienko)
 
 * 🇬🇧 English
 * 🇨🇿 Czech
-* 🇷🇺 Russian - setting names contributed by [V1ncvega](https://github.com/V1ncvega)
+* 🇷🇺 Russian - most setting names contributed by [V1ncvega](https://github.com/V1ncvega); Roboport Range is not translated yet

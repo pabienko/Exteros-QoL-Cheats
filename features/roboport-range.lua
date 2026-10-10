@@ -30,11 +30,25 @@ function M.apply()
   if roboports then
     for _, proto in pairs(roboports) do
       if proto.logistics_radius then
-        proto.logistics_radius = resolve(
+        local new_logistics_radius = resolve(
           "exteros-qol-cheat-roboport-logistic-radius-mode",
           "exteros-qol-cheat-roboport-logistic-radius-value",
           proto.logistics_radius
         )
+
+        if proto.logistics_connection_distance then
+          local new_connection_distance = resolve(
+            "exteros-qol-cheat-roboport-logistic-radius-mode",
+            "exteros-qol-cheat-roboport-logistic-radius-value",
+            proto.logistics_connection_distance
+          )
+          if new_connection_distance < new_logistics_radius then
+            new_connection_distance = new_logistics_radius
+          end
+          proto.logistics_connection_distance = new_connection_distance
+        end
+
+        proto.logistics_radius = new_logistics_radius
       else
         debug.log("Roboport '" .. proto.name .. "' has no logistics_radius, skipping.", "cheats")
       end

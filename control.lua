@@ -1,7 +1,7 @@
 ---@diagnostic disable-next-line: unresolved-require
 local legacy = require("__Exteros-QoL-System__.core.legacy-cheats")
-
-local pending_reapply = {}
+---@diagnostic disable-next-line: unresolved-require
+local debug = require("__Exteros-QoL-System__.core.debug")
 
 local HUB_PER_USER = {
   {
@@ -52,11 +52,12 @@ local HUB_GROUPS = {
   { key = "inventory-slots", title = {"exteros-qol-cheats-hub.inventory-slots"}, per_user = { HUB_PER_USER[4] } }
 }
 
-local function debug_log(msg)
-  if settings.startup["exteros-qol-debug"] and settings.startup["exteros-qol-debug"].value then
-    log("[Cheats] " .. msg)
-  end
-end
+local CHEAT_SETTING_NAMES = {
+  ["cheat-reach-distance"] = true,
+  ["cheat-crafting-speed"] = true,
+  ["cheat-mining-speed"] = true,
+  ["cheat-inventory-bonus"] = true
+}
 
 ---@return boolean
 local function enabled()
@@ -68,7 +69,7 @@ local function update_all_cheats(player)
   if not player or not player.valid then return end
   if not enabled() then return end
 
-  debug_log("Updating all cheats for " .. player.name)
+  debug.log("Updating all cheats for " .. player.name, "cheats")
   local p_settings = settings.get_player_settings(player)
   if not p_settings then return end
 
@@ -79,7 +80,7 @@ local function update_all_cheats(player)
   if not reach_setting or not crafting_setting or not mining_setting or not inv_setting then return end
 
   if not player.character then
-    debug_log("Player " .. player.name .. " has no character, skipping.")
+    debug.log("Player " .. player.name .. " has no character, skipping.", "cheats")
     return
   end
 
@@ -102,15 +103,26 @@ end
 ---@param player LuaPlayer?
 local function reset_player(player)
   if not player or not player.valid then return end
-  local had_character = player.character ~= nil
-  legacy.reset(player)
-  if had_character then
+  if legacy.reset(player) then
     storage.applied[player.index] = nil
+  end
+end
+
+---@param player_index uint
+local function handle_character_change(player_index)
+  local player = game.get_player(player_index)
+  if not player or not player.valid then return end
+
+  if enabled() then
+    update_all_cheats(player)
+  elseif storage.applied[player.index] then
+    reset_player(player)
   end
 end
 
 script.on_init(function()
   storage.applied = {}
+  storage.pending_reapply = {}
   for _, player in pairs(game.players) do
     if enabled() then
       update_all_cheats(player)
@@ -122,6 +134,7 @@ end)
 
 script.on_configuration_changed(function()
   storage.applied = storage.applied or {}
+  storage.pending_reapply = storage.pending_reapply or {}
   if enabled() then
     for _, player in pairs(game.players) do
       update_all_cheats(player)
@@ -133,47 +146,61 @@ script.on_configuration_changed(function()
   end
 end)
 
-script.on_load(function()
-  pending_reapply = {}
-end)
-
-script.on_event(defines.events.on_tick, function(event)
-  for player_index, tick in pairs(pending_reapply) do
-    if event.tick >= tick then
-      pending_reapply[player_index] = nil
-      update_all_cheats(game.get_player(player_index))
-    end
-  end
-end)
-
-script.on_event(defines.events.on_runtime_mod_setting_changed, function(event)
-  if not enabled() then return end
-
-  local player = event.player_index and game.get_player(event.player_index)
-  if player then
-    update_all_cheats(player)
-  end
-end)
-
-script.on_event(defines.events.on_player_created, function(event)
-  update_all_cheats(game.get_player(event.player_index))
-end)
-
 script.on_event(defines.events.on_player_joined_game, function(event)
-  local player_index = event.player_index
-  update_all_cheats(game.get_player(player_index))
-  pending_reapply[player_index] = game.tick + 1
+  handle_character_change(event.player_index)
+  if enabled() then
+    storage.pending_reapply[event.player_index] = game.tick + 1
+  end
 end)
 
-script.on_event(defines.events.on_player_respawned, function(event)
-  update_all_cheats(game.get_player(event.player_index))
+script.on_event(defines.events.on_player_controller_changed, function(event)
+  handle_character_change(event.player_index)
 end)
+
+script.on_event(defines.events.on_cutscene_cancelled, function(event)
+  handle_character_change(event.player_index)
+end)
+
+script.on_event(defines.events.on_cutscene_finished, function(event)
+  handle_character_change(event.player_index)
+end)
+
+script.on_event(defines.events.on_player_removed, function(event)
+  storage.applied[event.player_index] = nil
+  storage.pending_reapply[event.player_index] = nil
+end)
+
+if enabled() then
+  script.on_event(defines.events.on_tick, function(event)
+    for player_index, tick in pairs(storage.pending_reapply) do
+      if event.tick >= tick then
+        storage.pending_reapply[player_index] = nil
+        update_all_cheats(game.get_player(player_index))
+      end
+    end
+  end)
+
+  script.on_event(defines.events.on_runtime_mod_setting_changed, function(event)
+    if not CHEAT_SETTING_NAMES[event.setting] then return end
+
+    local player = event.player_index and game.get_player(event.player_index)
+    if player then
+      update_all_cheats(player)
+    end
+  end)
+
+  script.on_event(defines.events.on_player_created, function(event)
+    update_all_cheats(game.get_player(event.player_index))
+  end)
+
+  script.on_event(defines.events.on_player_respawned, function(event)
+    update_all_cheats(game.get_player(event.player_index))
+  end)
+end
 
 remote.add_interface("exteros-qol-addon-cheats", {
   hub_settings = function()
     return {
-      per_user = HUB_PER_USER,
-      title = {"mod-name.Exteros-QoL-Cheats"},
       color = "#E0807A",
       groups = HUB_GROUPS
     }

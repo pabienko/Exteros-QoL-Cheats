@@ -1,6 +1,6 @@
 {
   "name": "Exteros-QoL-Cheats",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "title": "Exteros Quality of Life System - Cheats",
   "author": "Exteros",
   "contact": "https://github.com/pabienko",
@@ -8,7 +8,7 @@
   "factorio_version": "2.0",
   "dependencies": [
     "base >= 2.0",
-    "Exteros-QoL-System >= 0.3.8"
+    "Exteros-QoL-System >= 0.3.9"
   ],
   "description": "Cheat addon for Exteros' QoL System: reach distance, crafting and mining speed, inventory slots, stack size, productivity on every recipe, and roboport logistic, construction and radar range. Nothing changes until you enable Cheat Mode."
 }
