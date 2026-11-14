@@ -1,14 +1,14 @@
 {
   "name": "Exteros-QoL-Cheats",
-  "version": "0.3.4",
-  "title": "Exteros Quality of Life System - Cheats",
+  "version": "1.0.0",
+  "title": "Exteros' Cheats",
   "author": "Exteros",
   "contact": "https://github.com/pabienko",
   "homepage": "https://github.com/pabienko/Exteros-QoL-Cheats",
-  "factorio_version": "2.0",
+  "factorio_version": "2.1",
   "dependencies": [
-    "base >= 2.0",
-    "Exteros-QoL-System >= 0.3.9"
+    "base >= 2.1.24",
+    "exteros-lib >= 1.0.0"
   ],
-  "description": "Cheat addon for Exteros' QoL System: reach distance, crafting and mining speed, inventory slots, stack size, productivity on every recipe, and roboport logistic, construction and radar range. Nothing changes until you enable Cheat Mode."
+  "description": "Standalone cheat mod: reach distance, crafting/mining speed, inventory slots, stack size, recipe productivity, and roboport ranges. Off by default; character bonuses also need Cheat Mode in Exteros' Hub."
 }

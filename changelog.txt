@@ -1,4 +1,18 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 14. 11. 2026
+  Major Features:
+    - Rebuilt on Factorio 2.1 only; the 2.0 line ends here.
+    - Standalone mod now: depends only on Exteros' Lib, not on Exteros' QoL.
+    - Cheat Mode is a runtime switch, changed through Exteros' Hub (SHIFT + E).
+  Changes:
+    - Productivity, Stack Size, and Roboport Range stay plain startup settings with no master switch.
+  Bugfixes:
+    - Internal fixes and improvements.
+  Upgrading from 0.4.x:
+    - Cheat Mode is off after the update and its bonuses are removed; turn it back on in Exteros' Hub.
+    - No longer needs Exteros' QoL, only Exteros' Lib. Older versions can't load next to Exteros' QoL 1.0.0.
+---------------------------------------------------------------------------------------------------
 Version: 0.4.4
 Date: 10. 10. 2026
   Bugfixes:

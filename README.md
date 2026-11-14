@@ -1,16 +1,16 @@
-# Exteros Quality of Life System - Cheats
+# Exteros' Cheats
 
-An optional addon for [Exteros' QoL System](https://mods.factorio.com/mod/Exteros-QoL-System). It holds everything that changes the rules of the game rather than the number of clicks, so the QoL System itself never touches your game's balance.
+A standalone mod by Exteros, needs only [Exteros' Lib](https://mods.factorio.com/mod/exteros-lib) (installed automatically). Holds everything that changes the rules of the game, not just the number of clicks.
 
-[![Factorio Version](https://img.shields.io/badge/Factorio-2.0+-orange.svg)](https://mods.factorio.com/mod/Exteros-QoL-Cheats) [![Factorio 2.1](https://img.shields.io/badge/Factorio-2.1-orange.svg)](https://mods.factorio.com/mod/Exteros-QoL-Cheats) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Factorio 2.1](https://img.shields.io/badge/Factorio-2.1-orange.svg)](https://mods.factorio.com/mod/Exteros-QoL-Cheats) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ---
 
 ## Features
 
-Nothing does anything until you turn on **Cheat Mode** in the startup settings. The per-player values can then be changed in the mod settings or in the QoL System's Settings Hub (SHIFT + E).
+Nothing happens until an admin turns on **Cheat Mode** in Exteros' Hub (SHIFT + E). Productivity, Stack Size and Roboport Range are startup settings instead, active when they differ from default.
 
-⚠️ **Reach** - Raises interaction, building, and loot pickup distance well beyond the normal reach.
+⚠️ **Reach** - Raises interaction, building and loot pickup distance.
 
 ⚠️ **Crafting Speed** - Changes your character's manual crafting speed.
 
@@ -18,33 +18,33 @@ Nothing does anything until you turn on **Cheat Mode** in the startup settings. 
 
 ⚠️ **Inventory Slots** - Adds bonus slots to your character's inventory.
 
-⚠️ **Stack Size** - Changes item stack sizes, either as a multiplier or as an absolute value.
+⚠️ **Stack Size** - Changes item stack sizes, as a multiplier or absolute value. No master switch, does nothing at default.
 
-⚠️ **Productivity** - Unlocks productivity modules for every recipe, including those that normally refuse them, and sets your own productivity cap.
+⚠️ **Productivity** - Unlocks productivity modules on every recipe, even ones that refuse them, and sets your productivity cap. No master switch, does nothing at default.
 
-⚠️ **Roboport Range** - Multiplies or sets an absolute value for the logistic radius, construction radius, personal roboport construction radius, and (where a roboport has one set explicitly) radar range of every roboport. Does not scale with quality.
+⚠️ **Roboport Range** - Multiplies or sets an absolute logistic radius, construction radius, personal roboport radius, and (where set explicitly) radar range for every roboport. Doesn't scale with quality; no master switch.
 
-Turning Cheat Mode off removes the reach, speed, and inventory bonuses from your character again.
+Turning Cheat Mode off removes the reach, speed and inventory bonuses.
 
 ---
 
-## Upgrading from the QoL System's built-in Cheat Mode
+## Other Mods
 
-Cheat Mode was part of Exteros' QoL System until version 0.3.2 / 0.4.2. Install this addon and all your cheat settings carry over unchanged. If you update the QoL System without it, the bonuses Cheat Mode left on your character are removed when you load the save.
+⚙️ **[Exteros' QoL](https://mods.factorio.com/mod/Exteros-QoL-System)** - Rate Calculator, Even Distribution, Belt Brush, Ghost Builder and many more quality of life features, each switched on separately.
 
-## Fuel Stats and Recycler Return Rate moved out
+🔧 **[Exteros' Tweaks](https://mods.factorio.com/mod/Exteros-QoL-Tweaks)** - Fuel stats, the recycler return rate for quality upcycling, and roboport charging.
 
-As of 0.3.3 / 0.4.3, Fuel Stats and Recycler Return Rate live in [Exteros' QoL Tweaks](https://mods.factorio.com/mod/Exteros-QoL-Tweaks) instead, each behind its own switch rather than Cheat Mode. If you already had either configured here, install Tweaks and your settings carry over unchanged; just turn the matching switch on there.
+---
 
 ## Installation
 
-Install through the in-game mod manager, or download it from the [Factorio Mod Portal](https://mods.factorio.com/mod/Exteros-QoL-Cheats). Exteros' QoL System is installed with it as a dependency.
+Install through the in-game mod manager, or from the [Factorio Mod Portal](https://mods.factorio.com/mod/Exteros-QoL-Cheats). Exteros' Lib comes with it; Exteros' QoL is not required.
 
 ## Compatibility
 
-- **Factorio 2.0** and **2.1** - released as two rows built from the same source, like the QoL System.
+- **Factorio 2.1** only - the 2.0 line is no longer supported from 1.0 on.
 - **Space Age**, **Quality**, and **Elevated Rails** - supported.
-- **Missing a mod?** I can only switch off features for mods I know about, and there are far too many on the mod portal to find them all. If you use a mod that does the same thing as one of my features and both run at once, please [open an issue](https://github.com/pabienko/Exteros-QoL-Cheats/issues) with its name and I will add it.
+- **Missing a mod?** If one does the same thing as a feature here and both run at once, please [open an issue](https://github.com/pabienko/Exteros-QoL-Cheats/issues) with its name.
 
 ---
 
